@@ -101,7 +101,7 @@ function game_mechanics(result){
         bal_container.textContent = balance + winnings
     }
     else if (multiplier == 1.5){
-        bal_container.textContent = balance + winnings
+        bal_container.textContent = Math.floor(balance + winnings)
     }
     else if (multiplier == 1){
         if (array = ['💩', '💩', '💩']){
@@ -112,9 +112,11 @@ function game_mechanics(result){
         }
     }
     else if (multiplier == 0.3){
-        bal_container.textContent = balance +  winnings
-    }
-    
+        bal_container.textContent = Math.floor(balance +  winnings)
+    }  
+    else if (multiplier == 0.5){
+        bal_container.textContent = Math.floor(balance + winnings)
+    } 
 }
 
 function modal_close() {
