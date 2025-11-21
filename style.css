@@ -1,0 +1,262 @@
+body{
+    justify-content: center;
+    text-align: center;
+    font-family: Orbitron, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    background-image: url('assets/Untitled\ design.png');
+    background-size: cover;
+    background-position: center;
+    color: #53fffa;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.topnav{
+    background-color: #111111;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav a{
+    float: left;
+    font-size: 17px;
+    padding: 20px 16px;
+    text-decoration: none;
+    color: #00bfff;
+}
+
+.topnav a.split{
+    float: right;
+}
+
+.topnav a:hover{
+    background-color: #ffd700;
+    color: #00bfff;
+}
+
+.Slot-Machine{
+    margin-top: 8%;
+    background-color: #111111;
+    height: 32rem;
+    width: 45rem;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    margin-bottom: 10%;
+}
+
+.title{
+    text-shadow: 0 0 10px #2cdef9, 0 0 30px #00c3ff;
+    font-size: 3rem;
+ }
+
+.version{
+    text-shadow: 0 0 10px #ffea00, 0 0 30px #ffd700;
+}
+.reels{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7%;
+}
+
+.reel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px;
+    border-radius: 10px;
+    height: 8rem;
+    width: 8rem;
+    font-size: 3rem;
+    margin:0 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px #00bfff, inset 0 0 10px #000;
+}
+
+.terminal{
+    color: #00bfff;
+}
+
+.balance{
+    text-shadow: 0 0 15px #00bfff, inset 0 0 10px #000;
+}
+
+.bet-container{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    display: flex;
+}
+input{
+    border-radius: 20px;
+    background-color: #000000;
+    color: #00bfff;
+    border: 2px solid;
+    text-align: right;
+    height: 1.3rem;
+    margin-left: 5px;
+    width: 20rem;
+}
+.but{
+    align-items: center;
+    justify-content: center;
+}
+#button_ID{
+    color: #111111;
+    background: linear-gradient(#00bfff, #ffd700, #00bfff);
+    border-radius: 5px;
+    border: solid 2px;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 0 10px #00bfff, 0 0 15px #2cdef9;
+    transition: 0.3s;
+    font-family: Orbitron;
+}
+
+#button_ID:hover{
+    transform: scale(1.1);
+}
+
+.foot{
+    background-color: #111111;
+    color: #00bfff;
+    font-size: large;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot a{
+    padding: 16px 18px;
+    text-decoration: none;
+    color: #00c3ff;
+}
+
+/* Minimal modal CSS - ASCII-safe */
+
+.hidden{
+    display: none !important;
+}
+
+#result_modal {
+  transition: 1s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+/* backdrop */
+.modal-backdrop {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+/* panel */
+.modal-panel {
+  position: relative;
+  width: 40rem;
+  height: 28rem;
+  max-width: calc(100% - 32px);
+  background: #0b0b0d;
+  color: #b6fff9;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.modal_title {
+    font-size: 2.2rem;
+}
+/* close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #ffd700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reels2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reel2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px;
+    border-radius: 10px;
+    height: 7rem;
+    width: 7rem;
+    font-size: 2.7rem;
+    margin:0 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px #00bfff, inset 0 0 10px #000;
+}
+
+/* message and meta */
+#init_msg { margin: 8px 0 5px; font-size: 1.5rem; }
+.modal_msg { font-size: 0.85rem; color: rgba(182,255,249,0.8); margin: 8px 0px 20px; }
+
+/* actions */
+
+.action-close {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(182,255,249,0.08);
+}
+
+
+/* responsive */
+@media (max-width:520px) {
+  .modal-panel { width: 92vw; padding: 12px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

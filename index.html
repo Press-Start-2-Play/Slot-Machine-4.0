@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine 4.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b708f1554d.js" crossorigin="anonymous"></script>
+</head>
+<!
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#">Updates</a>
+        <a href="#" >Support</a>
+        <a href="#" >Rules</a>
+        <a href="Paytable.html">Playtable</a>
+        <a href="User.html" class="split">User <i class="fa-regular fa-user"></i></a>
+    </div>
+    <div class="Slot-Machine">
+        <h1 class="title">Slot Machine Game <span class="version">4.0</span></h1>
+        <div class="reels">
+            <div class="reel" id="reel1">💎</div>
+            <div class="reel" id="reel2">🍒</div> 
+            <div class="reel" id="reel3">💩</div>
+        </div>
+        <div class="terminal">
+            <h1 class="balance">Balance: <span id="bal_num">100</span></h1>
+
+            <div class="bet-container"><label for="bet">Bet: </label>
+            <input type="number" min="1" placeholder="5" id="bet">
+            </div>  
+            <div class="but"><button id="button_ID" onclick="main_btn_click()">SPIN 🎰</button></div> 
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <a href="Rules.html">Rules and Playtable</a>
+            Slot Machine 4.0 2025 (1)
+        </div>
+    
+
+    </div>    
+    </footer>
+
+<div id="result_modal" class="hidden" data-win-type="">
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-panel">
+    <button class="modal-close" data-close onclick="modal_close()"><i class="fa-solid fa-xmark"></i></button>
+
+    <h1 id="modal-title" class="modal_title">Result</h1>
+    <div class="reels2">
+        <div class="reel2" id="reel10">💎</div>
+        <div class="reel2" id="reel20">🍒</div> 
+        <div class="reel2" id="reel30">💩</div>
+    </div>
+    <div class="modal_msgs">
+       <h2 id="init_msg">You won !</h2>
+       <p id="modal-msg" class="modal_msg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit dolore explicabo nostrum voluptatem maxime facilis nisi sint, numquam quo quia minima mollitia maiores voluptatum at quod, eaque totam eos quidem?</p>
+    </div>
+
+    <div class="modal-values">
+      Bet: <span id="modal-bet">0</span> - Payout: <span id="modal-payout">0</span>
+      <p>Balance: <span id="modal-balance"></span></p>
+    </div>
+
+    <div class="modal-actions">
+      <button class="action-close" data-action="close" onclick="modal_close()">Close</button>
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

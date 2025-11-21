@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playtable</title>
+     <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b708f1554d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#">Updates</a>
+        <a href="#" >Support</a>
+        <a href="#" >Rules</a>
+        <a href="Paytable.html">Paytable</a>
+        <a href="User.html" class="split">User <i class="fa-regular fa-user"></i></a>
+    </div>
+
+    <div class="paytable_container">
+        <div class="header">
+            <h1 class="title">Paytable</h1>
+        </div>
+        <div class="paytable_reels">
+            <div class="paytable_reel" id="pay_reel1">🍒</div>
+            <div class="paytable_reel" id="pay_reel2">🍒</div>
+            <div class="paytable_reel" id="pay_reel3">🍒</div>
+        </div>
+        <div class="paytable_msg">
+            <h1 id="title_msg">WIN</h1>
+            <h2 id="pay_reel_msg">= Bet × 100</h2>
+        </div>
+        <div class="paytable_buttons">
+          <a class="paytable_button" id="previous" onclick="previous()">&#10094;</a>
+          <a class="paytable_button" id="next" onclick="next()">&#10095;</a>
+        </div>
+        
+    </div>
+    <script>
+        let reel1 = document.getElementById("pay_reel1")
+        let reel2 = document.getElementById("pay_reel2")
+        let reel3 = document.getElementById("pay_reel3")
+        const paytable_msg_container = document.getElementById("pay_reel_msg")
+        const title = document.getElementById("title_msg")
+
+        let currentSlide = 1
+        let maxSlide = 7
+        
+        const Reel_fade_duration = 300;
+
+        function previous(){
+            [reel1, reel2, reel3].forEach(r => r.classList.add('hidden'));
+            setTimeout(() => {
+                currentSlide = currentSlide - 1;
+                if (currentSlide < 1) currentSlide = maxSlide;
+                main();
+                requestAnimationFrame(() => [reel1, reel2, reel3].forEach(r => r.classList.remove('hidden')));
+            }, Reel_fade_duration / 2);
+        }
+
+        function next(){
+            [reel1, reel2, reel3].forEach(r => r.classList.add('hidden'));
+            setTimeout(() => {
+                currentSlide = currentSlide + 1;
+                if (currentSlide > maxSlide) currentSlide = 1;
+                main();
+                requestAnimationFrame(() => [reel1, reel2, reel3].forEach(r => r.classList.remove('hidden')));
+            }, Reel_fade_duration / 2);
+        }
+
+        function main(){
+            if (currentSlide == 1){
+                reel1.textContent = "💎"
+                reel2.textContent = "💎"
+                reel3.textContent = "💎"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 50"
+            }
+            else if (currentSlide == 2){
+                reel1.textContent = "💎"
+                reel2.textContent = "💎"
+                reel3.textContent = "🍒"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 10"
+            }
+            else if (currentSlide == 3) {
+                reel1.textContent = "🍒"
+                reel2.textContent = "🍒"
+                reel3.textContent = "🍒"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 7"
+            }
+            else if (currentSlide == 4){
+                reel1.textContent = "🍒"
+                reel2.textContent = "🍒"
+                reel3.textContent = "🍋"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 2"
+            }
+            else if (currentSlide == 5){
+                reel1.textContent = "🍋"
+                reel2.textContent = "🍋"
+                reel3.textContent = "🍋"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 1.5"  
+            }
+            else if (currentSlide == 6){
+                reel1.textContent = "🍋"
+                reel2.textContent = "🍋"
+                reel3.textContent = "🍒"
+                title.textContent = "WIN"
+                paytable_msg_container.textContent = "= Bet × 1"  
+            }
+            else if (currentSlide == 7){
+                reel1.textContent = "💩"
+                reel2.textContent = "💩"
+                reel3.textContent = "💩"
+                title.textContent = "LOSE"
+                paytable_msg_container.textContent = "= Bet × 1"
+            }}
+        main()
+    </script>
+</body>
+</html>
